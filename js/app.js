@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     //Validate that the selects have values
     if(currencySelect === '' || cryptoCurrencySelect === ''){
         //displays error message
-        ui.printMessage('All the fields are mandatory', 'deep-orange darken-4 card panel');
+        ui.printMessage('All the fields are mandatory', 'deep-orange center darken-4 card panel');
     }
     else{
         //Query the REST API
