@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+    <div>
+        <h1 class="title center">Cryptourrency Rates Calculator</h1>
+    </div>
+    <div class="container main-content">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <form class="col s8 offset-s2" id="form">
+                <div class="row">
+                    <div class="form">
+                        <div class="input-field col s12">
+                                <select id="currency">
+                                    <option value="" disabled selected>- Select Currency - </option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">Euro</option>
+                                </select>
+                                <label>Currency</label>
+                        </div>    
+                        <div class="input-field col s12">
+                            <select id="cryptocurrency">
+                                <option value="" disabled selected>- Select Cryptocurrency -</option>
+                            </select>
+                            <label>Cryptocurrency</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">Get Evaluation
+                                <i class="material-icons right">attach_money</i>
+                            </button>
+                        </div>
+                        <div class="messages col s12"></div>
+                        <div class="spinner"></div>
+                        <div id="result" class="col s12"></div>
+
+                    </div>
+                  
+                </div>
+            </form>
+        </div>
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+    <script src="js/cryptoAPI.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+            (function() {
+                $(document).ready(function(){
+                    setTimeout(() => {
+                        $('select').select();
+                    }, 4000);
+                });
+            })(jQuery);
+        </script>
+      <style>
+        .fa{
+        font-size:30px;
+        margin:5px;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .fa:hover{
+        font-size: 40px;
+        transform: rotate(45deg);
+        }
+        .fa-github:hover{
+        color:rgb(255, 0, 200);
+        }
+        .fa-twitter:hover{
+        color:#12c3e2;
+        }
+        .fa-linkedin:hover{
+        color:#12c3e2;
+        }
+        .fa-facebook:hover{
+        color:#10006b;
+        }
+          body {
+            background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          }
+          h1 {
+              font-size: 34px;
+              color: white;
+              font-family: 'Playfair Display', serif;
+          }
+          form {
+              margin: 50px auto;
+          }
+          .main-content {
+              margin: 50px auto;
+              background-color: white;
+              -webkit-box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
+                -moz-box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
+                box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
+          }
+          .messages {
+              color: white;
+          }
+          #result {
+                text-align: center;
+          }
+          .btn {
+              width: 100%;
+          }
+          .spinner  {
+              text-align: center;
+          }
+          .about{
+            text-decoration-line: underline;
+          }
+          .amount{
+              font-weight: bold;
+          }
+          .percent{
+              text-decoration-line: underline;
+          }
+          .title{
+              font-weight: bold
+          }
+      </style>
+    </div>
+    <div class="about center">Developed by Nate Osterfeld</div>
+    <div class="background center">
+            <span>
+                <a href="https://www.facebook.com/nathaniel.osterfeld"><i class="fa fa-round fa-facebook"></i></a>
+                <a href="https://twitter.com/OsterfeldNate"><i class="fa fa-round fa-twitter"></i></a>
+                <a href="https://github.com/NateOsterfeld"><i class="fa fa-github" style="font-size:48px;"></i></a>
+                <a href="https://linkedin.com/in/nathanielosterfeld"><i class="fa fa-round fa-linkedin"></i></a>
+            </span>
+        </div>
+        
+</body>
+</html>
